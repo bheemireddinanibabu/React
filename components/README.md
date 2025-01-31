@@ -10,7 +10,7 @@ function Welcome(props) {
 }
 ```
 
-Example with hooks
+* Example with hooks
 
 ```
 import React, { useState } from 'react';
@@ -41,7 +41,7 @@ class Welcome extends Component {
 }
 ```
 
-Example with State and Lifecycle Methods
+* Example with State and Lifecycle Methods
 
 ```
 import React, { Component } from 'react';
@@ -74,53 +74,56 @@ class Counter extends Component {
 ```
 
 * **Importing and exporting components**
-exporting and importing components are essential for organizing your code into reusable modules. This allows you to split your application into smaller, manageable files and reuse components across different parts of your app.
+  
+  Exporting and importing components are essential for organizing your code into reusable modules. This allows you to split   your application into smaller, manageable files and reuse components across different parts of your app.
 
-    * **Exporting Components:**
+  * **Exporting Components:**
 
-    **1.Default Export:**
+      **1.Default Export:**
 
-        1. A file can have only one default export.
-        2. When importing, you can name the imported component anything you want.
-        
-        ```
-        function Welcome(props) {
-            return <h1>Hello, {props.name}</h1>;
-        }
+      1. A file can have only one default export.
+      2. When importing, you can name the imported component anything you want.
 
-        export default Welcome;
-        ```
+  
+      ```
+      function Welcome(props) {
+          return <h1>Hello, {props.name}</h1>;
+      }
 
-    **2. Named Export:**
+      export default Welcome;
+      ```
 
-        1. A file can have multiple named exports.
-        2. When importing, you must use the exact name of the exported component.
+      **2. Named Export:**
 
-        ```
-        export function Button(props) {
-            return <button>{props.label}</button>;
-        }
+      1. A file can have multiple named exports.
+      2. When importing, you must use the exact name of the exported component.
 
-        export function Input(props) {
-            return <input type="text" placeholder={props.placeholder} />;
-        }
-        ```
 
-    * **Importing Components:**
+      ```
+      export function Button(props) {
+          return <button>{props.label}</button>;
+      }
 
-    **1. Importing a Default Export:**
+      export function Input(props) {
+          return <input type="text" placeholder={props.placeholder} />;
+      }
+      ```
 
-    ```
-    import Welcome from './Welcome'; // No curly braces for default exports
+  * **Importing Components:**
 
-    function App() {
-        return (
-            <div>
-                <Welcome name="John" />
-            </div>
-        );
-    }
-    ```
+     **1. Importing a Default Export:**
+
+      ```
+      import Welcome from './Welcome'; // No curly braces for default exports
+  
+      function App() {
+          return (
+              <div>
+                  <Welcome name="John" />
+              </div>
+          );
+      }
+      ```
 
     **2.Importing Named Exports:**
 
